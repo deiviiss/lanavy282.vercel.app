@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, MapPin, Clock, Phone, Navigation } from 'lucide-react'
 import { useState } from 'react'
-import { Badge } from '@/components/ui/badge'
 import { type Branch } from '@/lib/types'
 
 interface BranchSelectorModalProps {
@@ -94,11 +93,11 @@ export default function BranchSelectorModal({
                               {branch.distance}
                             </Badge>
                           )} */}
-                          {branch.isOpen !== undefined && (
+                          {/* {branch.isOpen !== undefined && (
                             <Badge variant={branch.isOpen ? 'default' : 'secondary'} className="text-xs">
                               {branch.isOpen ? 'Abierto' : 'Cerrado'}
                             </Badge>
-                          )}
+                          )} */}
                         </div>
                       </div>
 

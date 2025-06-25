@@ -14,7 +14,6 @@ export function SidebarCart() {
   const searchParams = useSearchParams()
   const table = searchParams.get('table')
   const tableNumber = Number(table)
-  const [showDeliveryModal, setShowDeliveryModal] = useState(false)
 
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
   const [showSafariModal, setShowSafariModal] = useState(false)
@@ -28,19 +27,17 @@ export function SidebarCart() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeSideCart()
-        setShowDeliveryModal(false)
         setShowSafariModal(false)
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => { window.removeEventListener('keydown', handleKeyDown) }
-  }, [closeSideCart, showDeliveryModal, showSafariModal])
+  }, [closeSideCart, showSafariModal])
 
   const generateAndSendWhatsApp = async (option: 'table' | 'delivery') => {
     if (!selectedBranch) {
       toast.error('Selecciona una sucursal antes de hacer tu pedido')
-      setShowDeliveryModal(false)
       closeSideCart()
       return
     }
@@ -87,7 +84,7 @@ export function SidebarCart() {
   }
 
   const handleWhatsAppCheckout = () => {
-    setShowDeliveryModal(true)
+    generateAndSendWhatsApp('delivery')
   }
 
   const handleRemoveItem = (cartItemId: string, productName: string) => {
@@ -338,50 +335,6 @@ export function SidebarCart() {
               <Button
                 variant="outline"
                 onClick={() => { setShowSafariModal(false) }}
-                className="w-full text-destructive border-destructive bg-background hover:bg-destructive/10 hover:text-black dark:hover:text-destructive"
-              >
-                Cancelar
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Delivery Modal */}
-      {showDeliveryModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="bg-muted p-6 rounded-2xl shadow-xl max-w-sm w-full text-center space-y-4">
-            <h3 className="text-lg font-semibold">¿Cómo será tu pedido?</h3>
-            <p className="text-sm text-muted-foreground">Selecciona una opción para continuar</p>
-            <div className="flex flex-col gap-2">
-              {!tableNumber && (
-                <p className="text-xs text-muted-foreground">
-                  Escanea el código QR que se encuentra en tu mesa.
-                </p>
-              )}
-              <Button
-                disabled={!tableNumber}
-                onClick={() => {
-                  generateAndSendWhatsApp('table')
-                  setShowDeliveryModal(false)
-                }}
-                className="bg-sidebar-accent-foreground hover:bg-sidebar-accent-foreground/90 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {tableNumber ? `Consumir en mesa (Mesa ${tableNumber})` : 'Consumir en mesa'}
-              </Button>
-
-              <Button
-                onClick={() => {
-                  generateAndSendWhatsApp('delivery')
-                  setShowDeliveryModal(false)
-                }}
-                className="bg-primary hover:bg-primary/90"
-              >
-                A domicilio
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => { setShowDeliveryModal(false) }}
                 className="w-full text-destructive border-destructive bg-background hover:bg-destructive/10 hover:text-black dark:hover:text-destructive"
               >
                 Cancelar

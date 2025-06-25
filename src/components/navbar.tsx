@@ -59,9 +59,9 @@ export function Navbar() {
 
   return (
     <header className="bg-card shadow-md sticky top-0 z-40">
-      <div className="container mx-auto px-2 sm:px-4 relative">
+      <div className="container mx-auto pl-2 pr-3 sm:px-4 relative">
 
-        <div className="flex justify-between items-center h-24 md:h-20">
+        <div className="flex justify-between items-center h-20 md:h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -69,7 +69,7 @@ export function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-1"
           >
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 dark:bg-muted-foreground p-2 rounded-3xl transition-colors">
               <Image
                 src="/images/logo.webp"
                 alt="la navy logo"
@@ -128,7 +128,7 @@ export function Navbar() {
               <ShoppingCart className="h-5 w-5 mr-1" />
               <span className="hidden sm:inline">Carrito</span>
               {totalItems > 0 && (
-                <Badge className="absolute -top-2 -right-2 bg-primary text-card px-1.5 py-0.5 text-xs rounded-full">
+                <Badge className="absolute -top-2 -right-2 bg-primary text-primary-foreground  px-1.5 py-0.5 text-xs rounded-full">
                   {totalItems}
                 </Badge>
               )}
@@ -137,13 +137,13 @@ export function Navbar() {
         </div>
 
         {/* Branch selector for mobile */}
-        <div className="md:hidden absolute right-0 sm:right-1/3 bottom-0">
+        <div className="md:hidden absolute right-0 sm:right-1/3 -bottom-1">
           {selectedBranch
             ? (
-              <Button variant="ghost" size="sm" onClick={handleChangeBranch} className="flex items-center gap-1 px-2 group-hover:bg-red-50 transition-colors">
-                <MapPin className="h-4 w-4 text-primary hover:text-red-500" />
-                <span className="text-xs font-medium  truncate">{selectedBranch.name}</span>
-                <ChevronDown className="h-3 w-3 text-muted-foreground" />
+              <Button variant="link" size="sm" onClick={handleChangeBranch} className="flex items-center gap-1 px-2 group-hover:bg-red-50 transition-colors">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-xs font-medium truncate">{selectedBranch.name}</span>
+                <ChevronDown className="h-3 w-3 text-primary" />
               </Button>)
             : (
               <Button variant="ghost" size="sm" onClick={handleChangeBranch} className="flex items-center gap-1 px-2">

@@ -257,7 +257,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Quesadillas con champiñón (2 piezas)',
-      description: 'Queso gouda/champiñón',
+      description: 'Queso gouda, champiñón',
       price: 48,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds['Especialidades y quesadillas'],
@@ -287,7 +287,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Hotcakes Navy',
-      description: '2 piezas de hotcakes, 2 piezas de huevo revuelto/tocino',
+      description: '2 piezas de hotcakes, 2 piezas de huevo revuelto, tocino',
       price: 100,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814007/hot_cakes_navy_vagzol.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
@@ -297,7 +297,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Hotcake Burguer',
-      description: '2 piezas de hotcakes carne de hamburguesa omelete de huevo queso Deisy tocino',
+      description: '2 piezas de hotcakes carne de hamburguesa, omelete de huevo, queso Deisy, tocino',
       price: 120,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813995/hot_burger_xlemtz.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
@@ -337,7 +337,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Miniburguer',
-      description: 'Carne de la casa (res) queso Deisy tocino lechuga aros de cebolla morada',
+      description: 'Carne de la casa (res), queso Deisy, tocino, lechuga, aros de cebolla morada',
       price: 50,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814007/mini_burger_rxc3yz.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
@@ -369,7 +369,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Coca cola',
-      description: 'Coca cola, refresco de cola 500ml',
+      description: 'Coca cola fría de 600ml',
       price: 32,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds.Refrescos,
@@ -379,7 +379,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Coca cola sin azúcar',
-      description: 'Coca cola sin azúcar, refresco de cola 500ml',
+      description: 'Coca cola sin azúcar fría de 600ml',
       price: 32,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds.Refrescos,
@@ -389,7 +389,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Té Reca',
-      description: 'Té Reca, refresco de té 500ml',
+      description: '',
       price: 0,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds.Refrescos,
@@ -399,7 +399,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Agua Purificada',
-      description: 'Agua purificada, refresco de agua 500ml',
+      description: 'Agua purificada fría de 600ml',
       price: 22,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds.Refrescos,
@@ -409,7 +409,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Refresco natural',
-      description: 'Refresco natural, refresco de agua 500ml',
+      description: 'Variedad de sabores por temporada',
       price: 0,
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
       categoryId: categoryIds.Refrescos,

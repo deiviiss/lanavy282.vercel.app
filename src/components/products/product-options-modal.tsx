@@ -277,11 +277,11 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
                           className="min-h-[80px] resize-none border-primary focus:border-secondary focus:ring-secondary"
                           maxLength={200}
                         />
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-xs text-primary/90">
+                        <div className="flex justify-between items-center mt-2 text-xs text-primary-foreground">
+                          <span>
                             Opcional - Comparte cualquier preferencia especial
                           </span>
-                          <span className="text-xs text-primary">{specialNote.length}/200</span>
+                          <span>{specialNote.length}/200</span>
                         </div>
                       </div>
                     </motion.div>
