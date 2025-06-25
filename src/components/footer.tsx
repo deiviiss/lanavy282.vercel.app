@@ -1,4 +1,4 @@
-import { Clock, Facebook, MapPin, Phone } from 'lucide-react'
+import { Clock, Facebook, Instagram, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 import { getBranches } from '@/actions/branches/get-branches'
@@ -88,6 +88,15 @@ export async function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/lanavy282"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-pink-600 p-2 rounded-full transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
               </Link>
               <Link
                 href={'https://wa.me/+5219811339534'}
