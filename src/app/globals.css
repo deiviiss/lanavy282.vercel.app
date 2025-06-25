@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-primary-gradient {
+    /* @apply bg-gradient-to-r from-orange-500 to-amber-500 text-white */
+    background-image: linear-gradient(to left, hsl(var(--chart-4)), hsl(var(--chart-1)));
+    color: white;
+  }
+
+  .dark .bg-primary-gradient {
+    /* @apply from-orange-700 to-amber-600; */
+    background-image: linear-gradient(to right, hsl(var(--chart-1)), hsl(var(--chart-4)));
+    color: white;
+  }
+}
+
+/* Base variables and themes */
+@layer base {
+  :root {
+    /* General UI colors */
+    --background: 36 100% 97% --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    /* Primary and secondary colors */
+    /* Change for custom */
+    --primary: 213 56% 24%;
+    --primary-foreground: 0 0% 100%;
+    /* Change for custom */
+    --secondary: 0 83% 52;
+    --secondary-foreground: 0 0% 15%;
+
+    /* Support colors */
+    --muted: 215 40% 96%;
+    /* Change for custom */
+    --muted-foreground: 215 15% 40%;
+    /* Change for custom */
+    --accent: 213 45% 52%;
+    --accent-foreground: 0 0% 100%;
+    /* Change for custom */
+    /* red-500 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders, inputs and rings */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 213 56% 24%;
+    /* Change for custom */
+
+    /* Chart colors */
+    /* Change for custom */
+    --chart-1: 213 56% 24%;
+    /* Change for custom */
+    --chart-2: 0 83% 52%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 197 37% 24%;
+    --chart-5: 340 75% 55%;
+
+    /* Global radius */
+    --radius: 0.5rem;
+
+    /* Custom sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Change for custom */
+    --sidebar-primary: 213 56% 24%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Change for custom */
+    --primary: 213 56% 24%;
+    /* Change for custom */
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 83% 52%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 213 10% 60%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    /* Change for custom */
+    --chart-1: 213 56% 24%;
+    /* Change for custom */
+    --chart-2: 0 83% 52%;
+    /* Change for custom */
+    --chart-3: 173 58% 39%;
+    /* Change for custom */
+    --chart-4: 197 37% 24%;
+    /* Change for custom */
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    /* Change for custom */
+    --sidebar-primary: 213 56% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Base styles applied globally */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
