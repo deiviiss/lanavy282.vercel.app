@@ -91,8 +91,7 @@ export function SidebarCart() {
     })
 
     messageOrder += `*Total:* $${getSubtotal().toFixed(2)}\n
---------------------------------------------------------------\n
-\n`
+------------------------------------------------\n`
     messageOrder += `*Tipo de pedido:* ${option === 'pickup' ? 'Para pasar a recoger' : 'Domicilio'}\n\n`
 
     if (option === 'pickup') {
@@ -112,7 +111,7 @@ export function SidebarCart() {
       messageOrder += `📞 *Teléfono:* ${deliveryForm.receiverPhone}\n`
       messageOrder += `💳 *Pago:* ${deliveryForm.paymentMethod}\n\n`
 
-      messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar y, seguido compártenos tu ubicación para que podamos enviarte tu pedido.\n\n'
+      messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar y, seguido compártenos tu ubicación para que podamos enviarte tu pedido.'
     }
 
     const encodedMessage = encodeURIComponent(messageOrder)
