@@ -5,6 +5,7 @@ import { X, ShoppingCart, Minus, Plus, Info, MessageCircle, MessageSquare } from
 import Image from 'next/image'
 import { useState } from 'react'
 import { toast } from 'sonner'
+import { ProductOptionsLimited } from '@/components/products/product-options-limited'
 import { ProductOptionsMultiple } from '@/components/products/product-options-multiple'
 import ProductSelector from '@/components/products/product-selector'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -23,12 +24,16 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
   const [selectedOptionId, setSelectedOptionId] = useState<string>('') // Size
   const [selectedOptionIds, setSelectedOptionIds] = useState<string[]>([]) // Ingredients
   const [specialNote, setSpecialNote] = useState<string>('') // Note
+  const [selectedLimitedOptionIds, setSelectedLimitedOptionIds] = useState<string[]>([]) // Limited ingredients
 
   const [quantity, setQuantity] = useState<number>(1)
   const { addToCart } = useCartStore()
 
   const selectedOption = product.options?.find((option) => option.id === selectedOptionId) || null // Size
   const selectedOptions = product.options?.filter((option) => selectedOptionIds.includes(option.id || '')) || [] // Ingredients
+  const selectedLimitedOptions = product.options?.filter(
+    (option) => selectedLimitedOptionIds.includes(option.id || '')
+  ) || []
 
   const handleAddToCart = () => {
     if (!selectedOption && selectedOptions.length === 0 && !isVariableOnly) return
@@ -49,7 +54,8 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
     const options = [
       ...(selectedOption ? [selectedOption] : []),
       ...(selectedOptions || []),
-      ...noteOption
+      ...noteOption,
+      ...(selectedLimitedOptions || [])
     ]
 
     const productWithSelectedOption = {
@@ -69,6 +75,7 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
     onClose()
     setSelectedOptionId('')
     setSelectedOptionIds([])
+    setSelectedLimitedOptionIds([])
     setQuantity(1)
   }
 
@@ -86,28 +93,28 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
     }
   }
 
-  const noteOptions = product.options?.filter((option) => option.type === 'note') || []
-  const hasNoteOptions = noteOptions.length > 0
-  const variablePriceOptions = product.groupedOptions?.variable || []
   const sizeOptions = product.groupedOptions?.size || []
   const ingredientOptions = product.groupedOptions?.ingredient || []
+  const variablePriceOptions = product.groupedOptions?.variable || []
+  const noteOptions = product.options?.filter((option) => option.type === 'note') || []
+  const limitedIngredientOptions = product.groupedOptions?.['limited-ingredient'] || []
 
   const hasSizeOptions = sizeOptions.length > 0
   const hasIngredientOptions = ingredientOptions.length > 0
   const hasVariableOptions = variablePriceOptions.length > 0
+  const hasNoteOptions = noteOptions.length > 0
+  const hasLimitedIngredientOptions = limitedIngredientOptions.length > 0
 
   const isVariableOnly = hasVariableOptions && !hasSizeOptions && !hasIngredientOptions
+  const isFreeSelectionOnly =
+    hasIngredientOptions && !hasSizeOptions && !hasLimitedIngredientOptions
 
   const isReadyToAdd =
-    isVariableOnly
-      ? true
-      : hasSizeOptions
-        ? !!selectedOption
-        : hasIngredientOptions
-          ? selectedOptionIds.length > 0
-          : true
+    isVariableOnly || isFreeSelectionOnly || (
+      [hasSizeOptions ? !!selectedOption : true, hasLimitedIngredientOptions ? selectedLimitedOptionIds.length > 0 : true]).every(Boolean)
 
-  const showQuantitySelector = selectedOption || selectedOptionIds.length > 0
+  const showQuantitySelector =
+    isVariableOnly || isFreeSelectionOnly || !!selectedOption || selectedLimitedOptionIds.length > 0
 
   return (
     <AnimatePresence>
@@ -199,6 +206,17 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
                 }
 
                 <div className="flex flex-col gap-5">
+                  {
+                    hasLimitedIngredientOptions && (
+                      <ProductOptionsLimited
+                        options={limitedIngredientOptions}
+                        selectedOptionIds={selectedLimitedOptionIds}
+                        setSelectedOptionIds={setSelectedLimitedOptionIds}
+                        maxSelected={3}
+                      />
+                    )
+                  }
+
                   {/* Options Selector for sizes */}
                   {
                     product.groupedOptions?.size &&

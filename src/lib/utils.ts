@@ -23,3 +23,9 @@ export function getProductTotal(product: Product): number {
 
   return basePrice + optionsPrice
 }
+
+// Format phone number with spaces
+export function formatPhoneNumber(phoneNumber: string): string {
+  const formattedPhoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3')
+  return formattedPhoneNumber
+}

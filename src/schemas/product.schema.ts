@@ -5,7 +5,7 @@ export const optionSchema = z.object({
   name: z.string().min(1).max(100),
   price: z.coerce.number().nonnegative(),
   isAvailable: z.boolean().default(true),
-  type: z.enum(['size', 'ingredient', 'variable', 'note']),
+  type: z.enum(['size', 'ingredient', 'variable', 'note', 'limited-ingredient']),
   quantity: z.number().int().nonnegative().optional().default(0)
 })
 

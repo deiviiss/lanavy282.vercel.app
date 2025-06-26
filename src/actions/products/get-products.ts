@@ -31,7 +31,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Marinera',
       description: 'Jamón, queso Deysi, tomate, cebolla curtida, lechuga',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889399/marinera_k4x5xv.png',
       categoryId: categoryIds['Las ligeras'],
       isAvailable: true,
       createdAt: new Date()
@@ -41,7 +41,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Capitán Fit',
       description: 'Jamón, queso panela, rayadura de zanahoria, pepino, germinado, cebolla curtida, tomate, aguacate, lechuga',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889412/capitan_fit_pybhyi.png',
       categoryId: categoryIds['Las ligeras'],
       isAvailable: true,
       createdAt: new Date()
@@ -63,7 +63,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Fragata',
       description: 'Jamón claveteado, queso Deisy, lechuga, cebolla curtida',
       price: 0,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813997/fragata_tyluva.png',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750891998/fragata_d8afnm.png',
       categoryId: categoryIds['Dulce y Salado'],
       isAvailable: true,
       createdAt: new Date()
@@ -73,7 +73,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Surtida',
       description: 'Pierna de cerdo, Jamón claveteado, queso Deisy, tocineta, jamón de pavo, tomate, aguacate, cebolla curtida, lechuga',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/hot_cakes_numgcb.png',
       categoryId: categoryIds['Dulce y Salado'],
       isAvailable: true,
       createdAt: new Date()
@@ -93,7 +93,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Almirante',
       description: 'Milanesa de pollo empanizada, jamón claveteado, pierna de cerdo, queso Deisy y gouda, tomate, aguacate, cebolla curtida, lechuga',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889407/almirante_tmracj.png',
       categoryId: categoryIds['Dulce y Salado'],
       isAvailable: true,
       createdAt: new Date()
@@ -115,7 +115,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Navy Pizza',
       description: 'Jamón, queso gouda, salami, salsa pizzera, lechuga, cubierta de parmesano',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889399/navy_pizza_msychp.png',
       categoryId: categoryIds.Parmesanas,
       isAvailable: true,
       createdAt: new Date()
@@ -132,7 +132,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      name: 'Buúfalo Parmesana',
+      name: 'Búfalo Parmesana',
       description: 'Milanesa de pollo empanizada, queso gouda, salsa búfalo, aguacate, cebolla morada, lechuga, cubierta de parmesano',
       price: 0,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813994/bufalo_parmesano_ifv50o.png',
@@ -147,7 +147,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Timón',
       description: 'Cochinita, cebolla curtida, aguacate',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889406/timon_g90jxd.png',
       categoryId: categoryIds['Para romper la dieta'],
       isAvailable: true,
       createdAt: new Date()
@@ -157,7 +157,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'But Negro',
       description: 'Carne molida guisado con recado negro, huevo duro, aguacate, cebolla curtida',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889411/but_negro_eif3i8.png',
       categoryId: categoryIds['Para romper la dieta'],
       isAvailable: true,
       createdAt: new Date()
@@ -177,7 +177,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Navio',
       description: 'Milanesa de pollo empanizada, queso Deisy, tomate, aguacate, cebolla curtida, lechuga, aderezo, frijol',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889399/navio_ljbcs7.png',
       categoryId: categoryIds['Para romper la dieta'],
       isAvailable: true,
       createdAt: new Date()
@@ -194,11 +194,11 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      name: 'Castacán (Exclusivo Viernes y Sábado)',
+      name: 'Castacán',
       description: 'Castacán, cáscara de chicharron, aguacate, pico de gallo, repollo',
       price: 0,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813997/castacan_hmyisa.png',
-      categoryId: categoryIds['Para romper la dieta'],
+      categoryId: categoryIds['Exclusivo viernes y sábado'],
       isAvailable: true,
       createdAt: new Date()
     },
@@ -207,7 +207,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Comandante',
       description: 'Media barra de francés con 2 a 3 especialidades a elegir del menú',
       price: 125,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889397/comandante_vgrutd.png',
       categoryId: categoryIds['Para romper la dieta'],
       isAvailable: true,
       createdAt: new Date()
@@ -217,20 +217,20 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Gringas Propela (2 piezas)',
-      description: 'Poc-Chuc asado al carbón/queso/cebolla asada/repollo/aguacate/tomate asado',
+      description: 'Poc-Chuc asado al carbón, queso, cebolla asada, repollo, aguacate, tomate asado',
       price: 80,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814006/gringas_propelas_wcrgkp.png',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750892578/gringas_propelas_iwq7gj.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
     },
     {
       id: randomUUID(),
-      name: 'Gringas de Castacán (2 piezas) Exclusivo viernes y sábado',
+      name: 'Gringas de Castacán (2 piezas)',
       description: 'Castacán, cáscara de chicharron, aguacate, pico de gallo, repollo',
       price: 85,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814006/gringas_castacan_dh5pun.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750892396/gringas_castacan_m1v73p.png',
+      categoryId: categoryIds['Exclusivo viernes y sábado'],
       isAvailable: true,
       createdAt: new Date()
     },
@@ -249,7 +249,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Burritas con Jamón y Queso (2 piezas)',
       description: 'Jamón, queso Deisy',
       price: 50,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889408/burritas_j_y_q_nexhdm.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -259,7 +259,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Quesadillas con champiñón (2 piezas)',
       description: 'Queso gouda, champiñón',
       price: 48,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889400/quesadilla_con_champi%C3%B1on_egszou.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -269,7 +269,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Mini hotcakes',
       description: '5 mini hotcakes decorados con plátano, Hershey\'s, chispas, crema batida',
       price: 65,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/mini_hot_cakes_toh3ul.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -279,7 +279,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Hotcakes',
       description: '4 piezas de hotcakes decorados con fruta',
       price: 89,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814006/hot_cakes_uzkxt2.png',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750891819/hot_cakes_iumyd9.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -309,7 +309,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Classic Burguer',
       description: 'Carne de la casa (res), queso gouda, tomate, aros de cebolla morada, lechuga, tocino, papas a la francesa',
       price: 115,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813997/classic_burger_pmfo7k.png',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750892244/classic_burger_e2nk1a.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -319,7 +319,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Navy Hawaii',
       description: 'Carne de la casa (res), queso gouda, tomate, aros de cebolla morada, lechuga, piña asada, tocino, papas a la francesa',
       price: 135,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889399/navy_hawaii_tgyn6i.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -329,15 +329,25 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Fungi Navy',
       description: 'Carne de la casa (res), queso gouda, tocino, aros de cebolla morada, champiñones al ajillo, lechuga papas a la francesa',
       price: 135,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/fungy_navy_uo4rwx.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
     },
     {
       id: randomUUID(),
-      name: 'Miniburguer',
+      name: 'Miniburguer (res)',
       description: 'Carne de la casa (res), queso Deisy, tocino, lechuga, aros de cebolla morada',
+      price: 50,
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814007/mini_burger_rxc3yz.png',
+      categoryId: categoryIds['Especialidades y quesadillas'],
+      isAvailable: true,
+      createdAt: new Date()
+    },
+    {
+      id: randomUUID(),
+      name: 'Miniburguer (pollo)',
+      description: 'Carne de la casa (pollo), queso Deisy, tocino, lechuga, aros de cebolla morada',
       price: 50,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814007/mini_burger_rxc3yz.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
@@ -349,7 +359,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Papas a la francesa',
       description: '',
       price: 65,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889401/papas_rffqju.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -359,7 +369,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Papas Navy',
       description: 'Papas a la francesa con salsa especial de la casa',
       price: 80,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889400/papas_navy_xdhfwr.png',
       categoryId: categoryIds['Especialidades y quesadillas'],
       isAvailable: true,
       createdAt: new Date()
@@ -371,7 +381,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Coca cola',
       description: 'Coca cola fría de 600ml',
       price: 32,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889412/coca_vauuy3.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -381,7 +391,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Coca cola sin azúcar',
       description: 'Coca cola sin azúcar fría de 600ml',
       price: 32,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889412/coca_zero_fusr3q.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -391,7 +401,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Té Reca',
       description: '',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750891063/reca_nxauzh.jpg',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -401,7 +411,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Agua Purificada',
       description: 'Agua purificada fría de 600ml',
       price: 22,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889407/agua_bvurkt.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -411,7 +421,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Refresco natural',
       description: 'Variedad de sabores por temporada',
       price: 0,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889400/naturales_bubhvc.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -419,19 +429,9 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Peñafiel',
-      description: '',
-      price: 32,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
-      categoryId: categoryIds.Refrescos,
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
-      name: 'Café',
-      description: '',
-      price: 38,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      description: 'Peñafiel de 600ml varios sabores',
+      price: 0,
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750891820/pe%C3%B1afiel_vhs1sp.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -441,7 +441,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Chocomilk',
       description: '',
       price: 38,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889412/chocomilk_hovchk.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -451,7 +451,7 @@ export async function getProducts(): Promise<Product[]> {
       name: 'Malteada',
       description: '',
       price: 70,
-      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp',
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/malteada_hbnzjb.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()
@@ -1460,10 +1460,10 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'note'
     },
-    // Buúfalo Parmesana (sizes)
+    // Búfalo Parmesana (sizes)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Francés',
       price: 60,
       quantity: 0,
@@ -1472,7 +1472,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Telera',
       price: 60,
       quantity: 0,
@@ -1481,7 +1481,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Cuernito',
       price: 60,
       quantity: 0,
@@ -1490,7 +1490,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Sándwich',
       price: 60,
       quantity: 0,
@@ -1499,17 +1499,17 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Gloria',
       price: 40,
       quantity: 0,
       isAvailable: true,
       type: 'size'
     },
-    // Buúfalo Parmesana (ingredients)
+    // Búfalo Parmesana (ingredients)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Cebolla asada',
       price: 18,
       quantity: 0,
@@ -1518,7 +1518,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Queso',
       price: 18,
       quantity: 0,
@@ -1527,7 +1527,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Chorizo argentino',
       price: 20,
       quantity: 0,
@@ -1536,7 +1536,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Cubierta de parmesano',
       price: 20,
       quantity: 0,
@@ -1545,7 +1545,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Jamón claveteado',
       price: 20,
       quantity: 0,
@@ -1554,17 +1554,17 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Tocino (1 rebanada)',
       price: 12,
       quantity: 0,
       isAvailable: true,
       type: 'ingredient'
     },
-    // Buúfalo Parmesana (comment)
+    // Búfalo Parmesana (comment)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Buúfalo Parmesana')!.id,
+      productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Comentario',
       price: 0,
       quantity: 0,
@@ -2126,10 +2126,10 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'note'
     },
-    // Castacán (Exclusivo Viernes y Sábado) (sizes)
+    // Castacán (sizes)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Francés',
       price: 60,
       quantity: 0,
@@ -2138,7 +2138,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Telera',
       price: 60,
       quantity: 0,
@@ -2147,7 +2147,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Cuernito',
       price: 60,
       quantity: 0,
@@ -2156,7 +2156,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Sándwich',
       price: 60,
       quantity: 0,
@@ -2165,17 +2165,17 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Gloria',
       price: 40,
       quantity: 0,
       isAvailable: true,
       type: 'size'
     },
-    // Castacán (Exclusivo Viernes y Sábado) (ingredients)
+    // Castacán (ingredients)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Cebolla asada',
       price: 18,
       quantity: 0,
@@ -2184,7 +2184,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Queso',
       price: 18,
       quantity: 0,
@@ -2193,7 +2193,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Chorizo argentino',
       price: 20,
       quantity: 0,
@@ -2202,7 +2202,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Cubierta de parmesano',
       price: 20,
       quantity: 0,
@@ -2211,7 +2211,7 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Jamón claveteado',
       price: 20,
       quantity: 0,
@@ -2220,22 +2220,233 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Tocino (1 rebanada)',
       price: 12,
       quantity: 0,
       isAvailable: true,
       type: 'ingredient'
     },
-    // Castacán (Exclusivo Viernes y Sábado) (comment)
+    // Castacán (comment)
     {
       id: randomUUID(),
-      productId: products.find(p => p.name === 'Castacán (Exclusivo Viernes y Sábado)')!.id,
+      productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Comentario',
       price: 0,
       quantity: 0,
       isAvailable: true,
       type: 'note'
+    },
+
+    // Comandante (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Comandante (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Comandante (limited ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Marinera',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Capitán Fit',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Corbeta',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Fragata',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Surtida',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Teniente',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Almirante',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Navy Pizza',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Navio Parmesana',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Búfalo Parmesana',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Timón',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'But Negro',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Propela',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Navio',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Capitán',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Comandante')!.id,
+      name: 'Castacán (viernes y sábado)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
     },
 
     // REFRESCOS
@@ -2429,6 +2640,15 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'size'
     },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Peñafiel')!.id,
+      name: 'Agua mineral',
+      price: 32,
+      quantity: 0,
+      isAvailable: true,
+      type: 'size'
+    },
     // Té Reca (sizes)
     {
       id: randomUUID(),
@@ -2513,8 +2733,8 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Navy Pizza', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Navio Parmesana', branchLabel: 'matriz' },
     { productName: 'Navio Parmesana', branchLabel: 'sucursal-bola-de-queso' },
-    { productName: 'Buúfalo Parmesana', branchLabel: 'matriz' },
-    { productName: 'Buúfalo Parmesana', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Búfalo Parmesana', branchLabel: 'matriz' },
+    { productName: 'Búfalo Parmesana', branchLabel: 'sucursal-bola-de-queso' },
 
     // PARA ROMPER LA DIETA
     { productName: 'Timón', branchLabel: 'matriz' },
@@ -2527,16 +2747,16 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Navio', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Capitán', branchLabel: 'matriz' },
     { productName: 'Capitán', branchLabel: 'sucursal-bola-de-queso' },
-    { productName: 'Castacán (Exclusivo Viernes y Sábado)', branchLabel: 'matriz' },
-    { productName: 'Castacán (Exclusivo Viernes y Sábado)', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Castacán', branchLabel: 'matriz' },
+    { productName: 'Castacán', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Comandante', branchLabel: 'matriz' },
     { productName: 'Comandante', branchLabel: 'sucursal-bola-de-queso' },
 
     // ESPECIALIDADES Y QUESADILLAS
     { productName: 'Gringas Propela (2 piezas)', branchLabel: 'matriz' },
     { productName: 'Gringas Propela (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
-    { productName: 'Gringas de Castacán (2 piezas) Exclusivo viernes y sábado', branchLabel: 'matriz' },
-    { productName: 'Gringas de Castacán (2 piezas) Exclusivo viernes y sábado', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Gringas de Castacán (2 piezas)', branchLabel: 'matriz' },
+    { productName: 'Gringas de Castacán (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Burritas con Champiñón (2 piezas)', branchLabel: 'matriz' },
     { productName: 'Burritas con Champiñón (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Burritas con Jamón y Queso (2 piezas)', branchLabel: 'matriz' },
@@ -2557,8 +2777,8 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Navy Hawaii', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Fungi Navy', branchLabel: 'matriz' },
     { productName: 'Fungi Navy', branchLabel: 'sucursal-bola-de-queso' },
-    { productName: 'Miniburguer', branchLabel: 'matriz' },
-    { productName: 'Miniburguer', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Miniburguer (res)', branchLabel: 'matriz' },
+    { productName: 'Miniburguer (pollo)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Papas a la francesa', branchLabel: 'matriz' },
     { productName: 'Papas a la francesa', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Papas Navy', branchLabel: 'matriz' },
@@ -2571,6 +2791,8 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Coca cola sin azúcar', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Té Reca', branchLabel: 'matriz' },
     { productName: 'Té Reca', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Peñafiel', branchLabel: 'matriz' },
+    { productName: 'Peñafiel', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Agua Purificada', branchLabel: 'matriz' },
     { productName: 'Agua Purificada', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Refresco natural', branchLabel: 'matriz' },

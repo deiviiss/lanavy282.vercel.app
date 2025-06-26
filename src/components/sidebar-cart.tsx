@@ -3,17 +3,37 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ShoppingBag, Trash2, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter
+} from '@/components/ui/dialog'
 import { cn, getProductTotal } from '@/lib/utils'
 import { useUiStore, useCartStore, useBranchStore } from '@/store'
 
 export function SidebarCart() {
-  const searchParams = useSearchParams()
-  const table = searchParams.get('table')
-  const tableNumber = Number(table)
+  const [showDeliveryModal, setShowDeliveryModal] = useState(false)
+
+  const [deliveryType, setDeliveryType] = useState<'pickup' | 'delivery' | null>(null)
+  const [pickupForm, setPickupForm] = useState({
+    name: '',
+    paymentMethod: ''
+  })
+
+  const [deliveryForm, setDeliveryForm] = useState({
+    address: '',
+    area: '',
+    reference: '',
+    receiverName: '',
+    receiverPhone: '',
+    paymentMethod: ''
+  })
 
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
   const [showSafariModal, setShowSafariModal] = useState(false)
@@ -27,17 +47,19 @@ export function SidebarCart() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeSideCart()
+        setShowDeliveryModal(false)
         setShowSafariModal(false)
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => { window.removeEventListener('keydown', handleKeyDown) }
-  }, [closeSideCart, showSafariModal])
+  }, [closeSideCart, showDeliveryModal, showSafariModal])
 
-  const generateAndSendWhatsApp = async (option: 'table' | 'delivery') => {
+  const generateAndSendWhatsApp = async (option: 'pickup' | 'delivery') => {
     if (!selectedBranch) {
       toast.error('Selecciona una sucursal antes de hacer tu pedido')
+      setShowDeliveryModal(false)
       closeSideCart()
       return
     }
@@ -68,14 +90,46 @@ export function SidebarCart() {
       messageOrder += '\n' // Separador entre productos
     })
 
-    messageOrder += `*Total:* $${getSubtotal().toFixed(2)}\n`
-    messageOrder += `*Tipo de pedido:* ${option === 'table' ? `Mesa ${tableNumber}` : 'Domicilio'}\n\n`
-    messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar.\n\n'
+    messageOrder += `*Total:* $${getSubtotal().toFixed(2)}\n
+--------------------------------------------------------------\n
+\n`
+    messageOrder += `*Tipo de pedido:* ${option === 'pickup' ? 'Para pasar a recoger' : 'Domicilio'}\n\n`
+
+    if (option === 'pickup') {
+      messageOrder += `👤 *Cliente:* ${pickupForm.name}\n`
+      messageOrder += `💳 *Pago:* ${pickupForm.paymentMethod}\n\n`
+      messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar.\n\n'
+    }
+
+    if (option === 'delivery') {
+      messageOrder += `📍 *Dirección:* ${deliveryForm.address}\n`
+
+      if (deliveryForm.area) messageOrder += `🏢 *Área:* ${deliveryForm.area}\n`
+
+      if (deliveryForm.reference) messageOrder += `🗺️ *Referencia:* ${deliveryForm.reference}\n`
+
+      messageOrder += `👤 *Recibe:* ${deliveryForm.receiverName}\n`
+      messageOrder += `📞 *Teléfono:* ${deliveryForm.receiverPhone}\n`
+      messageOrder += `💳 *Pago:* ${deliveryForm.paymentMethod}\n\n`
+
+      messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar y, seguido compártenos tu ubicación para que podamos enviarte tu pedido.\n\n'
+    }
 
     const encodedMessage = encodeURIComponent(messageOrder)
 
     if (!isSafari) {
       window.open(`https://wa.me/+521${phoneNumber}?text=${encodedMessage}`, '_blank')
+      setDeliveryType(null)
+      setPickupForm({ name: '', paymentMethod: '' })
+      setDeliveryForm({
+        address: '',
+        area: '',
+        reference: '',
+        receiverName: '',
+        receiverPhone: '',
+        paymentMethod: ''
+      })
+
       closeSideCart()
     } else {
       setShowSafariModal(true)
@@ -83,8 +137,32 @@ export function SidebarCart() {
     }
   }
 
+  const handleSendOrder = () => {
+    if (deliveryType === 'pickup') {
+      if (!pickupForm.name || !pickupForm.paymentMethod) {
+        toast.error('Completa todos los campos')
+        return
+      }
+      generateAndSendWhatsApp('pickup')
+    }
+
+    if (deliveryType === 'delivery') {
+      const { address, receiverName, receiverPhone, paymentMethod } = deliveryForm
+
+      if (!address || !receiverName || !receiverPhone || !paymentMethod) {
+        toast.error('Faltan datos para el envío')
+        return
+      }
+
+      generateAndSendWhatsApp('delivery')
+    }
+
+    setShowDeliveryModal(false)
+    closeSideCart()
+  }
+
   const handleWhatsAppCheckout = () => {
-    generateAndSendWhatsApp('delivery')
+    setShowDeliveryModal(true)
   }
 
   const handleRemoveItem = (cartItemId: string, productName: string) => {
@@ -327,6 +405,16 @@ export function SidebarCart() {
                   if (pendingMessage) window.open(pendingMessage, '_blank')
                   setShowSafariModal(false)
                   setPendingMessage(null)
+                  setDeliveryType(null)
+                  setPickupForm({ name: '', paymentMethod: '' })
+                  setDeliveryForm({
+                    address: '',
+                    area: '',
+                    reference: '',
+                    receiverName: '',
+                    receiverPhone: '',
+                    paymentMethod: ''
+                  })
                   closeSideCart()
                 }}
               >
@@ -343,6 +431,96 @@ export function SidebarCart() {
           </div>
         </div>
       )}
+      {/* Delivery Modal */}
+      <Dialog open={showDeliveryModal} onOpenChange={setShowDeliveryModal}>
+        <DialogContent className="max-w-sm bg-muted rounded-lg">
+          <DialogHeader>
+            <DialogTitle>Completar pedido</DialogTitle>
+            <DialogDescription className="text-sm text-muted-foreground">
+              Por favor, proporciona los datos necesarios para procesar tu pedido.
+            </DialogDescription>
+          </DialogHeader>
+
+          {!deliveryType && (
+            <div className="flex flex-col gap-2">
+              <Button
+                onClick={() => { setDeliveryType('pickup') }}
+              >
+                Recoger en sucursal
+              </Button>
+              <Button
+                onClick={() => { setDeliveryType('delivery') }}
+                className="bg-green-600 hover:bg-green-700"
+              >
+                A domicilio
+              </Button>
+            </div>
+          )}
+
+          {deliveryType === 'pickup' && (
+            <div className="space-y-4 mt-4">
+              <input
+                placeholder="Nombre completo"
+                value={pickupForm.name}
+                onChange={(e) => { setPickupForm({ ...pickupForm, name: e.target.value }) }}
+                className="w-full p-2 rounded border"
+              />
+              <select
+                value={pickupForm.paymentMethod}
+                onChange={(e) => { setPickupForm({ ...pickupForm, paymentMethod: e.target.value }) }}
+                className="w-full p-2 rounded border"
+              >
+                <option value="">Forma de pago</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="transferencia">Transferencia</option>
+              </select>
+            </div>
+          )}
+
+          {deliveryType === 'delivery' && (
+            <div className="space-y-3 mt-4">
+              <input placeholder="Dirección completa" value={deliveryForm.address} onChange={(e) => { setDeliveryForm({ ...deliveryForm, address: e.target.value }) }} className="w-full p-2 rounded border" />
+              <input placeholder="Área o dependencia (opcional)" value={deliveryForm.area} onChange={(e) => { setDeliveryForm({ ...deliveryForm, area: e.target.value }) }} className="w-full p-2 rounded border" />
+              <input placeholder="Referencia del domicilio" value={deliveryForm.reference} onChange={(e) => { setDeliveryForm({ ...deliveryForm, reference: e.target.value }) }} className="w-full p-2 rounded border" />
+              <input placeholder="Nombre de quien recibe" value={deliveryForm.receiverName} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverName: e.target.value }) }} className="w-full p-2 rounded border" />
+              <input placeholder="Teléfono de contacto" value={deliveryForm.receiverPhone} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverPhone: e.target.value }) }} className="w-full p-2 rounded border" />
+              <select value={deliveryForm.paymentMethod} onChange={(e) => { setDeliveryForm({ ...deliveryForm, paymentMethod: e.target.value }) }} className="w-full p-2 rounded border">
+                <option value="">Forma de pago</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="transferencia">Transferencia</option>
+              </select>
+            </div>
+          )}
+
+          {(deliveryType === 'pickup' || deliveryType === 'delivery') && (
+            <DialogFooter className="flex flex-col gap-2 sm:flex-row sm:justify-end mt-4">
+              <Button
+                variant="destructive"
+                onClick={() => {
+                  setShowDeliveryModal(false)
+                  setTimeout(() => {
+                    setDeliveryType(null)
+                    setPickupForm({ name: '', paymentMethod: '' })
+                    setDeliveryForm({
+                      address: '',
+                      area: '',
+                      reference: '',
+                      receiverName: '',
+                      receiverPhone: '',
+                      paymentMethod: ''
+                    })
+                  }, 1000)
+                }}
+              >
+                Cancelar
+              </Button>
+              <Button onClick={handleSendOrder} className="bg-green-600 hover:bg-green-700">
+                Enviar pedido
+              </Button>
+            </DialogFooter>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   )
 }

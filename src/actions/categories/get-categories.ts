@@ -30,6 +30,11 @@ export async function getCategories(): Promise<Category[]> {
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp'
     },
     {
+      id: 'eb0b645f-709d-46d2-b198-4e8c3a5ea7f4',
+      name: 'Exclusivo viernes y sábado',
+      image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp'
+    },
+    {
       id: 'e3bd5418-9ece-459d-b95c-4a6499843ef4',
       name: 'Refrescos',
       image: 'https://res.cloudinary.com/djq34ckkj/image/upload/v1749682954/placeholder_ugdi4t.webp'
