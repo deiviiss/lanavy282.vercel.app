@@ -2,6 +2,7 @@ import { Clock, Facebook, Instagram, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 import { getBranches } from '@/actions/branches/get-branches'
+import { formatPhoneNumber } from '@/lib/utils'
 
 export async function Footer() {
   // const googleMapsUrl = 'https://maps.app.goo.gl/qAFDqDNZvYqwkaDG7'
@@ -47,7 +48,7 @@ export async function Footer() {
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                   >
-                    {branch.phone}
+                    {formatPhoneNumber(branch.phone)}
                   </Link>
                 </div>
               )}
