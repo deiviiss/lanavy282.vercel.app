@@ -36,7 +36,12 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
   ) || []
 
   const handleAddToCart = () => {
-    if (!selectedOption && selectedOptions.length === 0 && !isVariableOnly) return
+    const hasSomethingSelected =
+      isVariableOnly ||
+      isFreeSelectionOnly ||
+      (!!selectedOption || selectedLimitedOptions.length > 0)
+
+    if (!hasSomethingSelected) return
 
     const noteOptionDefaultValues = {
       id: crypto.randomUUID(),
@@ -54,8 +59,8 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
     const options = [
       ...(selectedOption ? [selectedOption] : []),
       ...(selectedOptions || []),
-      ...noteOption,
-      ...(selectedLimitedOptions || [])
+      ...(selectedLimitedOptions || []),
+      ...noteOption
     ]
 
     const productWithSelectedOption = {

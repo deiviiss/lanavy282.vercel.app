@@ -258,12 +258,31 @@ export function SidebarCart() {
                                   <div className="flex items-center mt-1">
                                     <div className="flex flex-col">
                                       {
+                                        item.product.name === 'Comandante' && (
+                                          <div className="flex items-start gap-2 text-xs">
+                                            <span className="font-medium pl-2">Cantidad: </span>
+                                            <button
+                                              onClick={() => { updateQuantity(item.cartItemId, Math.max(1, item.quantity - 1)) }}
+                                              className="text-muted-foreground  hover:text-primary w-5 h-5 flex items-center justify-center"
+                                            >
+                                              -
+                                            </button>
+                                            <span className="ml-1 text-muted-foreground">{item.quantity}</span>
+                                            <button
+                                              onClick={() => { updateQuantity(item.cartItemId, Math.max(1, item.quantity + 1)) }}
+                                              className="text-muted-foreground  hover:text-primary w-5 h-5 flex items-center justify-center"
+                                            >
+                                              +
+                                            </button>
+                                          </div>
+                                        )
+                                      }
+                                      {
                                         item.product.options?.map((option) => (
                                           <div
                                             key={option.id}
                                             className="flex gap-4 items-center mr-2 px-2 py-1 rounded text-xs"
                                           >
-
                                             <span className="font-medium">{option.name}</span>
                                             {
                                               option.type === 'size' && (
