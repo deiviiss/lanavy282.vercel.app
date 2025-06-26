@@ -300,7 +300,7 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
                           className="min-h-[80px] resize-none border-primary focus:border-secondary focus:ring-secondary"
                           maxLength={200}
                         />
-                        <div className="flex justify-between items-center mt-2 text-xs text-primary-foreground">
+                        <div className="flex justify-between items-center mt-2 text-xs text-muted-foreground">
                           <span>
                             Opcional - Comparte cualquier preferencia especial
                           </span>
