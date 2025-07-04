@@ -5,6 +5,8 @@ import { X, ShoppingBag, Trash2, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
+import { Input } from './ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -477,36 +479,46 @@ export function SidebarCart() {
 
           {deliveryType === 'pickup' && (
             <div className="space-y-4 mt-4">
-              <input
+              <Input
                 placeholder="Nombre completo"
                 value={pickupForm.name}
                 onChange={(e) => { setPickupForm({ ...pickupForm, name: e.target.value }) }}
-                className="w-full p-2 rounded border"
+                className="w-full p-2 rounded border text-muted-foreground text-sm"
               />
-              <select
+              <Select
                 value={pickupForm.paymentMethod}
-                onChange={(e) => { setPickupForm({ ...pickupForm, paymentMethod: e.target.value }) }}
-                className="w-full p-2 rounded border"
+                onValueChange={(value) => { setPickupForm({ ...pickupForm, paymentMethod: value }) }}
               >
-                <option value="">Forma de pago</option>
-                <option value="efectivo">Efectivo</option>
-                <option value="transferencia">Transferencia</option>
-              </select>
+                <SelectTrigger className='w-full p-2 rounded border text-muted-foreground text-sm'>
+                  <SelectValue placeholder="Forma de pago" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="efectivo">Efectivo</SelectItem>
+                  <SelectItem value="transferencia">Transferencia</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           )}
 
           {deliveryType === 'delivery' && (
             <div className="space-y-3 mt-4">
-              <input placeholder="Dirección completa" value={deliveryForm.address} onChange={(e) => { setDeliveryForm({ ...deliveryForm, address: e.target.value }) }} className="w-full p-2 rounded border" />
-              <input placeholder="Área o dependencia (opcional)" value={deliveryForm.area} onChange={(e) => { setDeliveryForm({ ...deliveryForm, area: e.target.value }) }} className="w-full p-2 rounded border" />
-              <input placeholder="Referencia del domicilio" value={deliveryForm.reference} onChange={(e) => { setDeliveryForm({ ...deliveryForm, reference: e.target.value }) }} className="w-full p-2 rounded border" />
-              <input placeholder="Nombre de quien recibe" value={deliveryForm.receiverName} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverName: e.target.value }) }} className="w-full p-2 rounded border" />
-              <input placeholder="Teléfono de contacto" value={deliveryForm.receiverPhone} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverPhone: e.target.value }) }} className="w-full p-2 rounded border" />
-              <select value={deliveryForm.paymentMethod} onChange={(e) => { setDeliveryForm({ ...deliveryForm, paymentMethod: e.target.value }) }} className="w-full p-2 rounded border">
-                <option value="">Forma de pago</option>
-                <option value="efectivo">Efectivo</option>
-                <option value="transferencia">Transferencia</option>
-              </select>
+              <Input placeholder="Nombre de quien recibe" value={deliveryForm.receiverName} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverName: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Input placeholder="Dirección completa" value={deliveryForm.address} onChange={(e) => { setDeliveryForm({ ...deliveryForm, address: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Input placeholder="Área o dependencia (opcional)" value={deliveryForm.area} onChange={(e) => { setDeliveryForm({ ...deliveryForm, area: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Input placeholder="Referencia del domicilio" value={deliveryForm.reference} onChange={(e) => { setDeliveryForm({ ...deliveryForm, reference: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Input placeholder="Teléfono de contacto" value={deliveryForm.receiverPhone} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverPhone: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Select
+                value={deliveryForm.paymentMethod}
+                onValueChange={(value) => { setDeliveryForm({ ...deliveryForm, paymentMethod: value }) }}
+              >
+                <SelectTrigger className='w-full p-2 rounded border text-muted-foreground text-sm'>
+                  <SelectValue placeholder="Forma de pago" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="efectivo">Efectivo</SelectItem>
+                  <SelectItem value="transferencia">Transferencia</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           )}
 

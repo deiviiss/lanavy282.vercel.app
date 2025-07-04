@@ -236,6 +236,16 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
+      name: 'Gringas navío (2 piezas)',
+      description: 'Milanesa de pollo empanizada, queso Deisy, cebolla curtida, tomate, aguacate, lechuga',
+      price: 80,
+      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1751628264/gringas_navio_vf0tlz.png',
+      categoryId: categoryIds['Especialidades y quesadillas'],
+      isAvailable: true,
+      createdAt: new Date()
+    },
+    {
+      id: randomUUID(),
       name: 'Burritas con Champiñón (2 piezas)',
       description: 'Jamón, queso Deisy, champiñón',
       price: 60,
@@ -409,7 +419,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       name: 'Agua Purificada',
-      description: 'Agua purificada fría de 600ml',
+      description: 'Agua purificada fría de 1 Lt',
       price: 22,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889407/agua_bvurkt.png',
       categoryId: categoryIds.Refrescos,
@@ -1229,6 +1239,71 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Almirante')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Sándwich Club (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Sándwich Club (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Sándwich Club')!.id,
       name: 'Comentario',
       price: 0,
       quantity: 0,
@@ -2449,6 +2524,632 @@ export async function getProducts(): Promise<Product[]> {
       type: 'limited-ingredient'
     },
 
+    // ESPECIALIDADES Y QUESADILLAS
+    // gringas propela (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Gringas Propela (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas Propela (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Gringas de Castacán (2 piezas) (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Gringas de Castacán (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas de Castacán (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Gringas navío (2 piezas) (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Gringas navío (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Gringas navío (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Quesadillas de champiñón (2 piezas) (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Quesadillas con champiñón (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Quesadillas con champiñón (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Mini hotcakes (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Mini hotcakes')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Hotcakes (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Hotcakes')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Hotcakes Navy (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
+      name: 'Huevo',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Hotcakes Navy (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Hotcake Burguer (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Hotcake Burguer')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Classic Burguer (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Classic Burguer (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Classic Burguer')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Navy Hawaii (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Navy Hawaii (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Navy Hawaii')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Fungi Navy (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Fungi Navy (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Fungi Navy')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Miniburguer (res) (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (res)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    // Miniburguer (pollo) (ingredients)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Cebolla asada',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Queso',
+      price: 18,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Chorizo argentino',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Cubierta de parmesano',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Jamón claveteado',
+      price: 20,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Miniburguer (pollo)')!.id,
+      name: 'Tocino (1 rebanada)',
+      price: 12,
+      quantity: 0,
+      isAvailable: true,
+      type: 'ingredient'
+    },
+
     // REFRESCOS
     // refresco natural (ingredients)
     {
@@ -2704,7 +3405,6 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'size'
     }
-
   ]
 
   const productBranchLinks = [
@@ -2757,6 +3457,8 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Gringas Propela (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Gringas de Castacán (2 piezas)', branchLabel: 'matriz' },
     { productName: 'Gringas de Castacán (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
+    { productName: 'Gringas navío (2 piezas)', branchLabel: 'matriz' },
+    { productName: 'Gringas navío (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Burritas con Champiñón (2 piezas)', branchLabel: 'matriz' },
     { productName: 'Burritas con Champiñón (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Burritas con Jamón y Queso (2 piezas)', branchLabel: 'matriz' },
@@ -2766,9 +3468,7 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Mini hotcakes', branchLabel: 'matriz' },
 
     { productName: 'Hotcakes', branchLabel: 'matriz' },
-
     { productName: 'Hotcakes Navy', branchLabel: 'matriz' },
-
     { productName: 'Hotcake Burguer', branchLabel: 'matriz' },
 
     { productName: 'Classic Burguer', branchLabel: 'matriz' },
