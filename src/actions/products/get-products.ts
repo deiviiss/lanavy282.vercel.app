@@ -2785,6 +2785,26 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'note'
     },
+    // Burritas con Champiñón (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Burritas con Champiñón (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
+    // Burritas con Jamón y Queso (2 piezas) (comment)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Burritas con Jamón y Queso (2 piezas)')!.id,
+      name: 'Comentario',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'note'
+    },
     // Mini hotcakes (comment)
     {
       id: randomUUID(),
@@ -3391,7 +3411,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
       name: 'Original 1lt',
-      price: 25,
+      price: 42,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -3400,7 +3420,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
       name: 'Con limón 1lt',
-      price: 25,
+      price: 42,
       quantity: 0,
       isAvailable: true,
       type: 'size'

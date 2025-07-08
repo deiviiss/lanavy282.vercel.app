@@ -11,18 +11,7 @@ export function ProductOptionButton({ product }: ProductOptionButtonProps) {
   const getOptionText = () => {
     if (!product.options?.length) return 'Agregar'
 
-    // Assuming the first option's name indicates the type
-    const firstOption = product.options[0]
-
-    if (firstOption.type.toLowerCase().includes('size')) {
-      return 'Agregar'
-    }
-
-    if (firstOption.type.toLowerCase().includes('ingredient')) {
-      return 'Ingredientes'
-    }
-
-    return 'Elegir opción'
+    return 'Opciones'
   }
 
   return (
