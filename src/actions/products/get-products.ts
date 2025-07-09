@@ -3171,11 +3171,111 @@ export async function getProducts(): Promise<Product[]> {
     },
 
     // REFRESCOS
-    // refresco natural (ingredients)
+    // Refresco natural (limited ingredients)
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Horchata 500ml',
+      name: 'Horchata',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Jamaica',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Limonada',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Limonada fresa',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Pepino limón',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Chaya Piña (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Piña (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Lima (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Mandarina (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Pitalla (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: 'Marañon (solo en temporada)',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    // Refresco natural (sizes)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Refresco natural')!.id,
+      name: '500 ml',
       price: 25,
       quantity: 0,
       isAvailable: true,
@@ -3184,187 +3284,45 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Horchata 1lt',
+      name: '1 lt',
       price: 42,
       quantity: 0,
       isAvailable: true,
       type: 'size'
     },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Jamaica 500ml',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Jamaica 1lt',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Limonada fresa 500 ml',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Limonada fresa 1 lt',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Pepino limón 500ml',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Pepino limón 1 lt',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Chaya Piña 500ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Chaya Piña 1 lt (solo en temporada)',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Piña 500ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Piña 1 lt (solo en temporada)',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Lima 500ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Mandarina 500ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Mandarina 1 lt (solo en temporada)',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Pitalla 500 ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Pitalla 1 lt (solo en temporada)',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Marañon 500ml (solo en temporada)',
-      price: 25,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Refresco natural')!.id,
-      name: 'Marañon 1 lt (solo en temporada)',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
+    // Peñafiel (limited ingredients)
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Peñafiel')!.id,
       name: 'Fresa',
-      price: 32,
+      price: 0,
       quantity: 0,
       isAvailable: true,
-      type: 'size'
+      type: 'limited-ingredient'
     },
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Peñafiel')!.id,
       name: 'Manzana',
-      price: 32,
+      price: 0,
       quantity: 0,
       isAvailable: true,
-      type: 'size'
+      type: 'limited-ingredient'
     },
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Peñafiel')!.id,
       name: 'Agua mineral',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    // Peñafiel (sizes)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Peñafiel')!.id,
+      name: '600 ml',
       price: 32,
       quantity: 0,
       isAvailable: true,
@@ -3374,34 +3332,44 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
-      name: 'Original 500ml',
-      price: 25,
+      name: 'Original',
+      price: 0,
       quantity: 0,
       isAvailable: true,
-      type: 'size'
+      type: 'limited-ingredient'
     },
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
-      name: 'Original ligero 500ml',
-      price: 25,
+      name: 'Original ligero',
+      price: 0,
       quantity: 0,
       isAvailable: true,
-      type: 'size'
+      type: 'limited-ingredient'
     },
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
-      name: 'Con limón 500ml',
-      price: 25,
+      name: 'Con limón',
+      price: 0,
       quantity: 0,
       isAvailable: true,
-      type: 'size'
+      type: 'limited-ingredient'
     },
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
       name: 'Verde',
+      price: 0,
+      quantity: 0,
+      isAvailable: true,
+      type: 'limited-ingredient'
+    },
+    // Té Reca (sizes)
+    {
+      id: randomUUID(),
+      productId: products.find(p => p.name === 'Té Reca')!.id,
+      name: '500 ml',
       price: 25,
       quantity: 0,
       isAvailable: true,
@@ -3410,16 +3378,7 @@ export async function getProducts(): Promise<Product[]> {
     {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Té Reca')!.id,
-      name: 'Original 1lt',
-      price: 42,
-      quantity: 0,
-      isAvailable: true,
-      type: 'size'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Té Reca')!.id,
-      name: 'Con limón 1lt',
+      name: '1 lt',
       price: 42,
       quantity: 0,
       isAvailable: true,

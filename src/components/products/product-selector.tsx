@@ -1,5 +1,6 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { type ProductOption } from '@/lib/types'
+import { isRefrescoNatural } from '@/lib/utils'
 
 interface ProductSelectorProps {
   options: ProductOption[]
@@ -14,13 +15,11 @@ const ProductSelector = ({
   setSelectedOptionId,
   productName
 }: ProductSelectorProps) => {
-  const isRefrescoNatural = productName === 'Refresco natural' || productName === 'Té Reca'
-
   return (
     <div className="space-y-4">
       {/* Options Select */}
       <div>
-        <h4 className="font-medium mb-2">{isRefrescoNatural ? 'Selecciona un sabor' : 'Selecciona un pan'}:</h4>
+        <h4 className="font-medium mb-2">{isRefrescoNatural(productName) ? 'Selecciona un tamaño' : 'Selecciona un pan'}:</h4>
         <Select value={selectedOptionId} onValueChange={setSelectedOptionId}>
           <SelectTrigger className="w-full">
             <SelectValue placeholder="Elige una opción..." />

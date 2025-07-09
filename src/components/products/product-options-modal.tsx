@@ -37,12 +37,6 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
 
   const handleAddToCart = () => {
     if (!isReadyToAdd) return
-    // const hasSomethingSelected =
-    //   isVariableOnly ||
-    //   isFreeSelectionOnly ||
-    //   (!!selectedOption || selectedLimitedOptions.length > 0)
-
-    // if (!hasSomethingSelected) return
 
     const noteOptionDefaultValues = {
       id: crypto.randomUUID(),
@@ -100,33 +94,17 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
   }
 
   const sizeOptions = product.groupedOptions?.size || []
-  // const ingredientOptions = product.groupedOptions?.ingredient || []
-  // const variablePriceOptions = product.groupedOptions?.variable || []
   const noteOptions = product.options?.filter((option) => option.type === 'note') || []
   const limitedIngredientOptions = product.groupedOptions?.['limited-ingredient'] || []
 
-  // const hasSizeOptions = sizeOptions.length > 0
-  // const hasLimitedIngredientOptions = limitedIngredientOptions.length > 0
-  // const hasIngredientOptions = ingredientOptions.length > 0
-  // const hasVariableOptions = variablePriceOptions.length > 0
   const hasNoteOptions = noteOptions.length > 0
-
-  // const isVariableOnly = hasVariableOptions && !hasSizeOptions && !hasIngredientOptions
-  // const isFreeSelectionOnly =
-  //   hasIngredientOptions && !hasSizeOptions && !hasLimitedIngredientOptions
-
   const hasSizeOptions = sizeOptions.length > 0
   const hasLimitedIngredientOptions = limitedIngredientOptions.length > 0
 
   const sizeSelected = hasSizeOptions ? !!selectedOption : true
   const limitedIngredientSelected = hasLimitedIngredientOptions ? selectedLimitedOptionIds.length > 0 : true
 
-  // const isReadyToAdd =
-  //   isVariableOnly || isFreeSelectionOnly || (
-  //     [hasSizeOptions ? !!selectedOption : true, hasLimitedIngredientOptions ? selectedLimitedOptionIds.length > 0 : true]).every(Boolean)
-
   const isReadyToAdd = sizeSelected && limitedIngredientSelected
-
   const showQuantitySelector = isReadyToAdd
 
   return (
@@ -226,6 +204,7 @@ export default function ProductOptionsModal({ product, isOpen, onClose }: Produc
                         selectedOptionIds={selectedLimitedOptionIds}
                         setSelectedOptionIds={setSelectedLimitedOptionIds}
                         maxSelected={3}
+                        productName={product.name}
                       />
                     )
                   }
