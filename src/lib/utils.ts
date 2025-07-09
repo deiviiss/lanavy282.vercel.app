@@ -29,3 +29,7 @@ export function formatPhoneNumber(phoneNumber: string): string {
   const formattedPhoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3')
   return formattedPhoneNumber
 }
+
+// is a product a refresco natural?
+export const isRefrescoNatural = (name: string) =>
+  ['Refresco natural', 'Té Reca', 'Peñafiel'].includes(name)
