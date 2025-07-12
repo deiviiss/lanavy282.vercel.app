@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import { Toaster } from 'sonner'
@@ -44,6 +46,8 @@ export default function RootLayout({
           <ScrollToTop />
           <Toaster position="bottom-right" richColors />
         </Providers>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
