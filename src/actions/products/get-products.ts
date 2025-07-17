@@ -1465,7 +1465,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio Parmesana')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1540,7 +1540,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Francés',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1549,7 +1549,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Telera',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1558,7 +1558,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1567,7 +1567,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 68,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1576,7 +1576,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Búfalo Parmesana')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1651,7 +1651,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Timón')!.id,
       name: 'Francés',
-      price: 60,
+      price: 50,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1660,7 +1660,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Timón')!.id,
       name: 'Telera',
-      price: 60,
+      price: 50,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1669,7 +1669,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Timón')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 50,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1678,7 +1678,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Timón')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 50,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1687,7 +1687,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Timón')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 38,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1762,7 +1762,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'But Negro')!.id,
       name: 'Francés',
-      price: 60,
+      price: 58,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1771,7 +1771,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'But Negro')!.id,
       name: 'Telera',
-      price: 60,
+      price: 58,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1780,7 +1780,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'But Negro')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 58,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1789,7 +1789,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'But Negro')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 58,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1873,7 +1873,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Propela')!.id,
       name: 'Francés',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1882,7 +1882,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Propela')!.id,
       name: 'Telera',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1891,7 +1891,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Propela')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1900,7 +1900,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Propela')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 68,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1909,7 +1909,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Propela')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1984,7 +1984,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio')!.id,
       name: 'Francés',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -1993,7 +1993,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio')!.id,
       name: 'Telera',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2002,7 +2002,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2011,7 +2011,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 68,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2020,7 +2020,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Navio')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2095,7 +2095,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Capitán')!.id,
       name: 'Francés',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2104,7 +2104,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Capitán')!.id,
       name: 'Telera',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2113,7 +2113,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Capitán')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 75,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2122,7 +2122,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Capitán')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 68,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2131,7 +2131,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Capitán')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2206,7 +2206,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Francés',
-      price: 60,
+      price: 78,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2215,7 +2215,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Telera',
-      price: 60,
+      price: 78,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2224,7 +2224,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Cuernito',
-      price: 60,
+      price: 78,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2233,7 +2233,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Sándwich',
-      price: 60,
+      price: 68,
       quantity: 0,
       isAvailable: true,
       type: 'size'
@@ -2242,7 +2242,7 @@ export async function getProducts(): Promise<Product[]> {
       id: randomUUID(),
       productId: products.find(p => p.name === 'Castacán')!.id,
       name: 'Gloria',
-      price: 40,
+      price: 48,
       quantity: 0,
       isAvailable: true,
       type: 'size'
