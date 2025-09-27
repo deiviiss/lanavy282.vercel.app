@@ -88,8 +88,8 @@ export const GoogleMaps = ({ isOpen, onLocationChange, moveToLocation, initialLo
 
         const hasInitialLocation = initialLocation?.lat !== 0 && initialLocation?.lng !== 0
 
-        // location Londres
-        const defaultLocation = { lat: 51.507351, lng: -0.127758 }
+        // location Navy282
+        const defaultLocation = { lat: 19.8491608, lng: -90.5344815 }
 
         // Set initial location
         // If moveToLocation → priority

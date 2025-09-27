@@ -526,7 +526,7 @@ export function SidebarCart() {
               <div className="space-y-2">
                 <div className="border rounded-md py-4 px-2">
                   <div className='flex items-center gap-2 justify-between'>
-                    <h2 className="font-semibold text-sm mb-1">Ubicación</h2>
+                    <h2 className="font-light text-sm mb-1">Ubicación</h2>
                     <Badge className="text-[10px]">
                       Recomendado
                     </Badge></div>
