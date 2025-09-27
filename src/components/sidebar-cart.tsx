@@ -41,6 +41,8 @@ export function SidebarCart() {
     coordinates: { lat: 0, lng: 0 }
   })
 
+  const hasLocation = deliveryForm.coordinates.lat !== 0 && deliveryForm.coordinates.lng !== 0
+
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
   const [showSafariModal, setShowSafariModal] = useState(false)
   const [pendingMessage, setPendingMessage] = useState<string | null>(null)
@@ -526,7 +528,7 @@ export function SidebarCart() {
               <div className="space-y-2">
                 <div className="border rounded-md py-4 px-2">
                   <div className='flex items-center gap-2 justify-between'>
-                    <h2 className="font-light text-sm mb-1">Ubicación</h2>
+                    <h2 className="font-normal text-sm mb-1">Ubicación</h2>
                     <Badge className="text-[10px]">
                       Recomendado
                     </Badge></div>
@@ -540,16 +542,16 @@ export function SidebarCart() {
                       className="w-full justify-start gap-2 text-sm"
                     >
                       <MapPin className="h-4 w-4" />
-                      {deliveryForm.address ? 'Cambiar ubicación' : 'Compartir ubicación 😊'}
+                      {hasLocation ? 'Cambiar ubicación' : 'Compartir ubicación 😊'}
                     </Button>
 
                     {
-                      deliveryForm.address &&
+                      hasLocation &&
                       <Button
                         type="button"
                         variant="outline"
                         onClick={() => {
-                          setDeliveryForm({ ...deliveryForm, address: '', area: '' })
+                          setDeliveryForm({ ...deliveryForm, address: '', area: '', coordinates: { lat: 0, lng: 0 } })
                           toast.success('Ubicación borrada')
                         }}
                       >
@@ -563,7 +565,7 @@ export function SidebarCart() {
               <Input placeholder="Dirección completa" value={deliveryForm.address} onChange={(e) => { setDeliveryForm({ ...deliveryForm, address: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
               <Input placeholder="Área o dependencia (opcional)" value={deliveryForm.area} onChange={(e) => { setDeliveryForm({ ...deliveryForm, area: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
               <Input placeholder="Referencia del domicilio" value={deliveryForm.reference} onChange={(e) => { setDeliveryForm({ ...deliveryForm, reference: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
-              <Input placeholder="Teléfono de contacto" value={deliveryForm.receiverPhone} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverPhone: e.target.value }) }} className="w-full p-2 rounded border text-sm" />
+              <Input placeholder="Teléfono de contacto" value={deliveryForm.receiverPhone} onChange={(e) => { setDeliveryForm({ ...deliveryForm, receiverPhone: e.target.value }) }} className="w-full p-2 rounded border text-sm" autoComplete="off" />
               <Select
                 value={deliveryForm.paymentMethod}
                 onValueChange={(value) => { setDeliveryForm({ ...deliveryForm, paymentMethod: value }) }}

@@ -131,7 +131,7 @@ export function LocationPicker({ isOpen, onClose, onConfirmLocation, initialAddr
             <div className="p-3 bg-background rounded-lg border">
               <p className="text-sm font-medium">Dirección seleccionada:</p>
               <p className="text-xs text-muted-foreground mt-1">{selectedLocation.address}</p>
-              {selectedLocation.area && <p className="text-xs text-muted-foreground">Área: {selectedLocation.area}</p>}
+              {selectedLocation.area && <p className="text-xs text-muted-foreground"></p>}
             </div>
           )}
         </div>
