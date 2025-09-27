@@ -115,7 +115,7 @@ export function SidebarCart() {
 
       if (deliveryForm.reference) messageOrder += `🗺️ *Referencia:* ${deliveryForm.reference}\n`
 
-      messageOrder += deliveryForm.coordinates.lat
+      messageOrder += deliveryForm.coordinates.lat !== 0
         ? `📍 *Ubicación:* https://www.google.com/maps?q=${deliveryForm.coordinates.lat},${deliveryForm.coordinates.lng}\n\n`
         : ''
 
@@ -123,7 +123,9 @@ export function SidebarCart() {
       messageOrder += `📞 *Teléfono:* ${deliveryForm.receiverPhone}\n`
       messageOrder += `💳 *Pago:* ${deliveryForm.paymentMethod}\n\n`
 
-      messageOrder += '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar.'
+      messageOrder += deliveryForm.coordinates.lat !== 0
+        ? '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar.'
+        : '¡Gracias por tu pedido! Por favor, presiona el botón de enviar mensaje para continuar y, seguido compártenos tu ubicación para que podamos enviarte tu pedido.'
     }
 
     const encodedMessage = encodeURIComponent(messageOrder)

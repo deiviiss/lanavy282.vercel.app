@@ -76,7 +76,8 @@ export const GoogleMaps = ({ isOpen, onLocationChange, moveToLocation, initialLo
         const loader = new Loader({
           apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY || '',
           version: 'weekly',
-          libraries: ['places', 'geocoding']
+          libraries: ['places', 'geocoding'],
+          language: 'es'
         })
 
         const { Map } = await loader.importLibrary('maps')
