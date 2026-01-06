@@ -276,46 +276,6 @@ export async function getProducts(): Promise<Product[]> {
     },
     {
       id: randomUUID(),
-      name: 'Mini hotcakes',
-      description: '5 mini hotcakes decorados con plátano, Hershey\'s, chispas, crema batida',
-      price: 65,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/mini_hot_cakes_toh3ul.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
-      name: 'Hotcakes',
-      description: '4 piezas de hotcakes decorados con fruta',
-      price: 89,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750891819/hot_cakes_iumyd9.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
-      name: 'Hotcakes Navy',
-      description: '2 piezas de hotcakes, 2 piezas de huevo revuelto, tocino',
-      price: 100,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750814007/hot_cakes_navy_vagzol.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
-      name: 'Hotcake Burguer',
-      description: '2 piezas de hotcakes carne de hamburguesa, omelete de huevo, queso Deisy, tocino',
-      price: 120,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750813995/hot_burger_xlemtz.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
       name: 'Classic Burguer',
       description: 'Carne de la casa (res), queso gouda, tomate, aros de cebolla morada, lechuga, tocino, papas a la francesa',
       price: 115,
@@ -2805,65 +2765,6 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       type: 'note'
     },
-    // Mini hotcakes (comment)
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Mini hotcakes')!.id,
-      name: 'Comentario',
-      price: 0,
-      quantity: 0,
-      isAvailable: true,
-      type: 'note'
-    },
-    // Hotcakes (comment)
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Hotcakes')!.id,
-      name: 'Comentario',
-      price: 0,
-      quantity: 0,
-      isAvailable: true,
-      type: 'note'
-    },
-    // Hotcakes Navy (ingredients)
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
-      name: 'Tocino (1 rebanada)',
-      price: 18,
-      quantity: 0,
-      isAvailable: true,
-      type: 'ingredient'
-    },
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
-      name: 'Huevo',
-      price: 12,
-      quantity: 0,
-      isAvailable: true,
-      type: 'ingredient'
-    },
-    // Hotcakes Navy (comment)
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Hotcakes Navy')!.id,
-      name: 'Comentario',
-      price: 0,
-      quantity: 0,
-      isAvailable: true,
-      type: 'note'
-    },
-    // Hotcake Burguer (comment)
-    {
-      id: randomUUID(),
-      productId: products.find(p => p.name === 'Hotcake Burguer')!.id,
-      name: 'Comentario',
-      price: 0,
-      quantity: 0,
-      isAvailable: true,
-      type: 'note'
-    },
     // Classic Burguer (ingredients)
     {
       id: randomUUID(),
@@ -3444,11 +3345,6 @@ export async function getProducts(): Promise<Product[]> {
     { productName: 'Burritas con Jamón y Queso (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
     { productName: 'Quesadillas con champiñón (2 piezas)', branchLabel: 'matriz' },
     { productName: 'Quesadillas con champiñón (2 piezas)', branchLabel: 'sucursal-bola-de-queso' },
-    { productName: 'Mini hotcakes', branchLabel: 'matriz' },
-
-    { productName: 'Hotcakes', branchLabel: 'matriz' },
-    { productName: 'Hotcakes Navy', branchLabel: 'matriz' },
-    { productName: 'Hotcake Burguer', branchLabel: 'matriz' },
 
     { productName: 'Classic Burguer', branchLabel: 'matriz' },
     { productName: 'Classic Burguer', branchLabel: 'sucursal-bola-de-queso' },
