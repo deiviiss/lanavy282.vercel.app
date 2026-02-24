@@ -334,16 +334,6 @@ export async function getProducts(): Promise<Product[]> {
       isAvailable: true,
       createdAt: new Date()
     },
-    {
-      id: randomUUID(),
-      name: 'Papas Navy',
-      description: 'Papas a la francesa con salsa especial de la casa',
-      price: 80,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889400/papas_navy_xdhfwr.png',
-      categoryId: categoryIds['Especialidades y quesadillas'],
-      isAvailable: true,
-      createdAt: new Date()
-    },
 
     // REFRESCOS
     {
@@ -412,16 +402,6 @@ export async function getProducts(): Promise<Product[]> {
       description: '',
       price: 38,
       image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889412/chocomilk_hovchk.png',
-      categoryId: categoryIds.Refrescos,
-      isAvailable: true,
-      createdAt: new Date()
-    },
-    {
-      id: randomUUID(),
-      name: 'Malteada',
-      description: '',
-      price: 70,
-      image: 'https://res.cloudinary.com/dhyds3mnm/image/upload/v1750889398/malteada_hbnzjb.png',
       categoryId: categoryIds.Refrescos,
       isAvailable: true,
       createdAt: new Date()

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
+    "@googlemaps/js-api-loader": "1.16.10",
     "@hookform/resolvers": "^3.9.1",
     "@prisma/client": "6.8.2",
     "@radix-ui/react-accordion": "1.2.2",
@@ -39,8 +40,9 @@
     "@radix-ui/react-toggle": "1.1.1",
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
+    "@types/google.maps": "3.58.1",
+    "@vercel/analytics": "1.5.0",
+    "@vercel/speed-insights": "1.2.0",
     "bcryptjs": "3.0.2",
     "class-variance-authority": "0.7.1",
     "cloudinary": "2.6.1",
@@ -68,6 +70,7 @@
     "zustand": "4.5.2"
   },
   "devDependencies": {
+    "@types/google.maps": "3.58.1",
     "@types/node": "22",
     "@types/react": "19",
     "@types/react-dom": "19",
